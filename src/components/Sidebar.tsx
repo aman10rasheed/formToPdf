@@ -11,7 +11,7 @@ const Sidebar: React.FC<Props> = () => {
     <div className='h-full'>
       {/* Mobile Toggle Button */}
       <button
-        className="md:hidden p-2 text-white"
+        className="md:hidden p-2 text-Black"
         onClick={() => setIsOpen(!isOpen)}
       >
         Menu

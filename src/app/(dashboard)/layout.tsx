@@ -1,3 +1,4 @@
+import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import React from "react";
 
@@ -13,7 +14,10 @@ export default function RootLayout({
       <div className="h-screen">
         <Sidebar />
       </div>
-      {children}
+      <div className="flex flex-col w-full ">
+        <Header />
+        {children}
+      </div>
     </div>
   );
 }
