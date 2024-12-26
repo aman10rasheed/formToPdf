@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 import React from "react";
 
 type Props = {};
@@ -10,14 +11,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex">
-      <div className="h-screen">
-        <Sidebar />
-      </div>
-      <div className="flex flex-col w-full ">
-        <Header />
-        {children}
-      </div>
+    <div className="flex h-full bg-gray-100 dark:bg-gray-800 font-roboto">
+      <SidebarProvider>
+        <AppSidebar />
+        <div className="flex flex-col flex-1 w-full">
+          <Header />
+          <div className="w-full h-full">
+            {children}
+          </div>
+        </div>
+      </SidebarProvider>
     </div>
   );
 }
