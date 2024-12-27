@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <div className="flex h-full bg-gray-100 dark:bg-gray-800 font-roboto">
-      <SidebarProvider>
+      <SidebarProvider defaultOpen={false}>
         <AppSidebar />
         <div className="flex flex-col flex-1 w-full">
           <Header />

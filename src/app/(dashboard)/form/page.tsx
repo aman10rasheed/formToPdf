@@ -56,8 +56,8 @@ const Form = (props: Props) => {
   };
 
   return (
-    <div className="p-4 flex gap-2">
-      <form onSubmit={handleSubmit}>
+    <div className="p-4 flex justify-between">
+      <form className="w-2/3" onSubmit={handleSubmit}>
         <div className="flex gap-4 justify-around">
           <InputField
             label="Name"
